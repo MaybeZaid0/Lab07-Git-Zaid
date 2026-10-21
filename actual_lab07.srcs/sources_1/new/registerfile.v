@@ -15,7 +15,6 @@ module registerfile (
     reg [31:0] regs [31:0];
     integer i;
 
-    // Enforce RISC-V x0 semantics using ternary operators
     assign readData1 = (rs1 == 5'b00000) ? 32'b0 : regs[rs1];
     assign readData2 = (rs2 == 5'b00000) ? 32'b0 : regs[rs2];
 
